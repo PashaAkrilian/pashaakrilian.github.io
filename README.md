@@ -2,7 +2,7 @@
 
 Personal portfolio site, deployed via GitHub Pages.
 
-**Live:** https://pashaakrilian.github.io/Ship-the-Ugly-One/
+**Live:** https://pashaakrilian.github.io/
 
 ## About
 

@@ -24,6 +24,7 @@ body {
   font-family: var(--font-body), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  line-height: 1.5;
 }
 
 a {
@@ -48,6 +49,7 @@ a {
   font-size: 1rem;
   color: var(--text);
   text-decoration: none;
+  padding: 10px 0;
 }
 
 .site-nav-brand:hover,
@@ -65,6 +67,7 @@ a {
   color: var(--muted);
   font-size: 0.9rem;
   text-decoration: none;
+  padding: 6px 4px;
 }
 
 .site-nav-links a:hover,
@@ -185,15 +188,132 @@ a {
   opacity: 0.7;
 }
 
+/* working contact form, wired to a free form service */
+.contact {
+  text-align: left;
+  margin: 0 0 36px;
+}
+
+.contact h2 {
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 6px;
+}
+
+.contact-note {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin: 0 0 18px;
+}
+
+.contact form {
+  display: grid;
+  gap: 14px;
+}
+
+.field {
+  display: grid;
+  gap: 6px;
+}
+
+.field label {
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  color: var(--text);
+}
+
+.field input,
+.field textarea {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--text);
+  background: rgba(36, 66, 94, 0.15);
+  border: 1px solid var(--circuit);
+  border-radius: 8px;
+  padding: 12px 14px;
+  outline: none;
+  -webkit-appearance: none;
+  transition: border-color 0.2s ease;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: rgba(154, 167, 179, 0.6);
+}
+
+.field input:focus,
+.field textarea:focus {
+  border-color: var(--accent);
+}
+
+.contact .cta-btn {
+  border: none;
+  cursor: pointer;
+  justify-self: start;
+}
+
+.contact .cta-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.form-status {
+  min-height: 1.2em;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.form-status.ok {
+  color: var(--accent);
+}
+
+.form-status.error {
+  color: #ff8f8f;
+}
+
 @media (max-width: 420px) {
   .pill {
     font-size: 0.7rem;
     padding: 5px 12px;
   }
+}
 
-  .links a {
-    width: 40px;
-    height: 40px;
+@media (max-width: 600px) {
+  .site-nav {
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .site-nav-links {
+    gap: 6px;
+    justify-content: center;
+  }
+
+  .site-nav-links a {
+    font-size: 1rem;
+    padding: 10px 8px;
+  }
+
+  .site-footer {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact .cta-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .more-work .work-grid {
+    grid-template-columns: 1fr 1fr;
   }
 }
 

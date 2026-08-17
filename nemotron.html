@@ -97,6 +97,7 @@
     margin: 8px 0 4px;
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 10px;
+    -webkit-overflow-scrolling: touch;
   }
 
   table {
@@ -119,7 +120,7 @@
 
   th {
     font-family: var(--font-heading);
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: var(--muted);
@@ -156,7 +157,7 @@
   }
 
   .chart-legend .swatch.baseline {
-    background: #4E7FB8;
+    background: #5789C4;
   }
 
   .chart-legend .swatch.result {
@@ -201,7 +202,7 @@
   }
 
   .bar-baseline {
-    background: #4E7FB8;
+    background: #5789C4;
   }
 
   .bar-result {
@@ -245,6 +246,12 @@
     color: var(--muted);
     margin: 0 0 14px;
   }
+
+  @media (max-width: 480px) {
+    .case {
+      padding: 24px 16px 48px;
+    }
+  }
 </style>
 </head>
 <body>
@@ -255,7 +262,7 @@
       <a href="ecosentra.html">EcoSentra</a>
       <a href="siaga.html">SIAGA</a>
       <a href="nemotron.html">NVIDIA Nemotron</a>
-      <a href="mailto:dimaspasha49@gmail.com">Contact</a>
+      <a href="index.html#contact">Contact</a>
     </div>
   </nav>
 
@@ -317,7 +324,7 @@
         exact values are in the table underneath.
       </p>
 
-      <div class="metric-chart" data-palette="#4E7FB8,#B8801F">
+      <div class="metric-chart" data-palette="#5789C4,#B8801F">
         <div class="chart-legend">
           <span><span class="swatch baseline"></span>Random Sampling</span>
           <span><span class="swatch result"></span>Stratified Sampling</span>
