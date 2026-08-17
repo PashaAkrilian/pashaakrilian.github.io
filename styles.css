@@ -186,6 +186,40 @@ a {
   font-size: 0.8rem;
   color: var(--muted);
   opacity: 0.7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* FlyRank graduate badge slot. While the real badge/verification link is
+   pending, this renders as an honest "pending" pill instead of a fake link —
+   see the HTML comment beside it for the swap-in markup. */
+.grad-badge,
+.grad-badge-pending {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 10px;
+  border: 1px dashed var(--muted);
+  border-radius: 999px;
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+  line-height: 1.6;
+}
+
+.grad-badge {
+  border-style: solid;
+  border-color: var(--accent);
+  color: var(--text);
+  text-decoration: none;
+}
+
+.grad-badge img {
+  display: block;
+  height: 20px;
+  width: auto;
 }
 
 /* working contact form, wired to a free form service */
